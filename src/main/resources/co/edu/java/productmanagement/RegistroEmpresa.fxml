@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.RegistroEmpresaController">
+   <children>
+      <TextField fx:id="ReNombre" layoutX="225.0" layoutY="160.0" />
+      <ComboBox fx:id="ReSector" layoutX="225.0" layoutY="209.0" prefWidth="150.0" />
+      <Label layoutX="201.0" layoutY="66.0" text="Registro Empresa" textFill="#ff0101">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="225.0" layoutY="269.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Registrar" />
+      <Label layoutX="147.0" layoutY="164.0" text="Nombre">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="213.0" text="Sector">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.MenuController">
+<AnchorPane fx:id="contenedor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.MenuController">
    <children>
-      <Button layoutX="274.0" layoutY="143.0" mnemonicParsing="false" text="Agregar Productos" />
-      <Button layoutX="307.0" layoutY="200.0" mnemonicParsing="false" text="Editar Productos" />
-      <Button layoutX="307.0" layoutY="258.0" mnemonicParsing="false" text="Registrar Empresa" />
-      <Button layoutX="333.0" layoutY="311.0" mnemonicParsing="false" text="Registrar Ventas" />
-      <Button layoutX="359.0" layoutY="353.0" mnemonicParsing="false" text="Analisis" />
-      <Label layoutX="320.0" layoutY="46.0" text="Menu" textFill="#f50303">
+      <Button layoutX="242.0" layoutY="126.0" mnemonicParsing="false" onAction="#agregarproductos" text="Agregar Productos" />
+      <Button layoutX="248.0" layoutY="166.0" mnemonicParsing="false" text="Editar Productos" />
+      <Button layoutX="244.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrarempresa" text="Registrar Empresa" />
+      <Button layoutX="249.0" layoutY="252.0" mnemonicParsing="false" text="Registrar Ventas" />
+      <Button layoutX="272.0" layoutY="292.0" mnemonicParsing="false" text="Analisis" />
+      <Label layoutX="269.0" layoutY="55.0" text="Menu" textFill="#f50303">
          <font>
             <Font size="24.0" />
          </font>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.AgregarProductsController">
+   <children>
+      <TextField fx:id="PrPrecio" layoutX="225.0" layoutY="178.0" />
+      <TextField fx:id="PrEmpresa" layoutX="225.0" layoutY="305.0" />
+      <TextField fx:id="PrNombre" layoutX="225.0" layoutY="136.0" />
+      <TextField fx:id="PrCantidad" layoutX="225.0" layoutY="220.0" />
+      <Label layoutX="194.0" layoutY="50.0" text="Agregar Productos" textFill="#ff0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="417.0" layoutY="163.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="121.0" text="Agregar" />
+      <Label layoutX="145.0" layoutY="139.0" text="Nombre">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="181.0" text="Precio">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="223.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="265.0" text="Estado">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="308.0" text="Empresa">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="PrEstado" layoutX="225.0" layoutY="262.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
