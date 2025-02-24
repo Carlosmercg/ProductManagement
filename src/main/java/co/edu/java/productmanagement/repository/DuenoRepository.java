@@ -45,5 +45,18 @@ public class DuenoRepository {
         return null;
     }
 
+    public void agregarDueno(Dueno dueno) throws SQLException{
+        if(buscarDueno(dueno.getCedula(),new Dueno())==null){
+            String sql= "INSERT INTO dueno (nombre,apellido,username,password,cedula) VALUES (?,?,?,?,?)";
+            PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+            ps.setString(1,dueno.getNombre());
+            ps.setString(2,dueno.getApellido());
+            ps.setString(3,dueno.getUsername());
+            ps.setString(4,dueno.getPassword());
+            ps.setString(5,dueno.getCedula());
+            ps.executeUpdate();
+        }
+    }
+
 
 }

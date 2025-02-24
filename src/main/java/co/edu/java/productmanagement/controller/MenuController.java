@@ -42,4 +42,9 @@ public class MenuController {
     private void registrarempresa() {
         cargarVista("/co/edu/java/productmanagement/RegistroEmpresa.fxml");
     }
+
+    @FXML
+    private void Ventas() {
+        cargarVista("/co/edu/java/productmanagement/AgregarVentas.fxml");
+    }
 }

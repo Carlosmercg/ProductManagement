@@ -9,7 +9,7 @@
       <Button layoutX="242.0" layoutY="126.0" mnemonicParsing="false" onAction="#agregarproductos" text="Agregar Productos" />
       <Button layoutX="248.0" layoutY="166.0" mnemonicParsing="false" text="Editar Productos" />
       <Button layoutX="244.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrarempresa" text="Registrar Empresa" />
-      <Button layoutX="249.0" layoutY="252.0" mnemonicParsing="false" text="Registrar Ventas" />
+      <Button layoutX="249.0" layoutY="252.0" mnemonicParsing="false" onAction="#Ventas" text="Registrar Ventas" />
       <Button layoutX="272.0" layoutY="292.0" mnemonicParsing="false" text="Analisis" />
       <Label layoutX="269.0" layoutY="55.0" text="Menu" textFill="#f50303">
          <font>

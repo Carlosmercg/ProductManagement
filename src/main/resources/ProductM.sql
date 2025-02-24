@@ -1,4 +1,5 @@
 
+DROP TABLE VENTAS;
 DROP TABLE PRODUCTO;
 DROP TABLE EMPRESA;
 DROP TABLE DUENO;
@@ -32,10 +33,24 @@ CREATE TABLE IF NOT EXISTS Producto (
                                         precio DECIMAL(10,2) NOT NULL,
                                         cantidad INT NOT NULL,
                                         estado VARCHAR(50) NOT NULL,
-                                        id_dueno INT NOT NULL,
                                         id_empresa INT NOT NULL,
-                                        FOREIGN KEY (id_empresa) REFERENCES Empresa(id) ON DELETE CASCADE,
-                                        FOREIGN KEY (id_dueno) REFERENCES Dueno(id) ON DELETE CASCADE
+                                        FOREIGN KEY (id_empresa) REFERENCES Empresa(id) ON DELETE CASCADE
+
+);
+
+-- Crear tabla de Ventas
+
+CREATE TABLE IF NOT EXISTS Ventas (
+                                      id INT AUTO_INCREMENT PRIMARY KEY,
+                                      id_producto INT NOT NULL,
+                                      cantidad INT NOT NULL,
+                                      id_empresa INT NOT NULL,
+                                      valor DECIMAL(10,2) NOT NULL,
+                                      FOREIGN KEY (id_producto) REFERENCES Producto(id) ON DELETE CASCADE,
+                                      FOREIGN KEY (id_empresa) REFERENCES Empresa(id) ON DELETE CASCADE
+
+
+
 );
 
 -- Insertar datos de prueba
@@ -49,6 +64,6 @@ INSERT INTO Empresa (nombre, sector, id_dueno) VALUES
                                                    ('Market Experts', 'Consultoría', 2);
 
 
-INSERT INTO Producto (nombre, precio, cantidad, estado, id_dueno,id_empresa) VALUES
-                                                                                 ('Laptop', 1500.00, 10, 'Disponible', 1,1),
-                                                                                 ('Mouse', 25.00, 50, 'Disponible', 2,2);
+INSERT INTO Producto (nombre, precio, cantidad, estado,id_empresa) VALUES
+                                                                                 ('Laptop', 1500.00, 10, 'Disponible',1),
+                                                                                 ('Mouse', 25.00, 50, 'Disponible',2);

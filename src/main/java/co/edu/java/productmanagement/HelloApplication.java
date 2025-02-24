@@ -21,9 +21,9 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         H2Connection conexion = new H2Connection();
-
+        conexion.GetConnectionDBH2();
         JDBCInitializer init = new JDBCInitializer(conexion);
-        init.inicializar();
+        //init.inicializar();
 
         launch();
     }

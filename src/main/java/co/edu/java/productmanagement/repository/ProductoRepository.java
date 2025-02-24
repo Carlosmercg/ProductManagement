@@ -23,7 +23,6 @@ public class ProductoRepository {
             producto.setPrecio(resultSet.getInt("precio"));
             producto.setCantidad(resultSet.getInt("cantidad"));
             producto.setEstado(resultSet.getString("estado"));
-            producto.setIdDueno(resultSet.getInt("id_dueño"));
             producto.setIdEmpresa(resultSet.getInt("id_empresa"));
             return producto;
         }
@@ -42,7 +41,6 @@ public class ProductoRepository {
             producto.setPrecio(resultSet.getInt("precio"));
             producto.setCantidad(resultSet.getInt("cantidad"));
             producto.setEstado(resultSet.getString("estado"));
-            producto.setIdDueno(resultSet.getInt("id_dueño"));
             producto.setIdEmpresa(resultSet.getInt("id_empresa"));
             return producto;
         }

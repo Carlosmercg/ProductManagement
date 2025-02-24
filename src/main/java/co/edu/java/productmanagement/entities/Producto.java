@@ -7,7 +7,6 @@ public class Producto {
     private int precio;
     private int cantidad;
     private String estado;
-    private int idDueno;
     private int idEmpresa;
 
     public int getIdProducto() {
@@ -26,13 +25,6 @@ public class Producto {
         this.idEmpresa = idEmpresa;
     }
 
-    public int getIdDueno() {
-        return idDueno;
-    }
-
-    public void setIdDueno(int idDueno) {
-        this.idDueno = idDueno;
-    }
 
     public String getEstado() {
         return estado;
