@@ -6,6 +6,8 @@ import co.edu.java.productmanagement.entities.Producto;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductoRepository {
 
@@ -71,7 +73,32 @@ public class ProductoRepository {
         ps.setInt(6, producto.getIdProducto());
         ps.executeUpdate();
     }
+    public List<Producto> obtenerTodosLosProductos() throws SQLException {
+        List<Producto> productos = new ArrayList<>();
+        String sql = "SELECT * FROM Producto";
+        PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+        ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                Producto producto = new Producto();
+                producto.setIdProducto(resultSet.getInt("id"));
+                producto.setNombre(resultSet.getString("nombre"));
+                producto.setPrecio(resultSet.getFloat("precio"));
+                producto.setCantidad(resultSet.getInt("cantidad"));
+                producto.setEstado(resultSet.getString("estado"));
+                producto.setIdEmpresa(resultSet.getInt("id_empresa"));
 
+                productos.add(producto);
+            }
+
+        return productos;
+    }
+
+    public void eliminarProducto(int idProducto) throws SQLException {
+        String sql = "DELETE FROM Producto WHERE id = ?";
+        PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+        ps.setInt(1, idProducto);
+        ps.executeUpdate();
+    }
 
 
 }

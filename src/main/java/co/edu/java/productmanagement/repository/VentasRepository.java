@@ -38,6 +38,18 @@ public class VentasRepository {
         ps.executeUpdate();
     }
 
+        public int contarVentasPorProducto(int idProducto) throws SQLException {
+        String sql = "SELECT COUNT(*) AS total FROM Ventas WHERE id_producto = ?";
+        PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+        ps.setInt(1, idProducto);
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) {
+            return rs.getInt("total");
+        }
+        return 0;
+    }
+
 
 
 }

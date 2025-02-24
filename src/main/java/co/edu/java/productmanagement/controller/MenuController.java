@@ -47,4 +47,16 @@ public class MenuController {
     private void Ventas() {
         cargarVista("/co/edu/java/productmanagement/AgregarVentas.fxml");
     }
+
+    @FXML
+    private  void analisis(){
+        cargarVista("/co/edu/java/productmanagement/Analisis.fxml");
+
+    }
+
+    @FXML
+    private void editar(){
+        cargarVista("/co/edu/java/productmanagement/EditarProductos.fxml");
+
+    }
 }

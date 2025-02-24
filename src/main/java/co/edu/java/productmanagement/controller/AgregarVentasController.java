@@ -21,7 +21,6 @@ public class AgregarVentasController {
 
     Ventas venta ;
     RegistroService registroService = new RegistroService();
-    VentasRepository ventasRepository = new VentasRepository();
 
     @FXML
     public void registro(){

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.EditarProductosController">
+   <children>
+      <Button layoutX="103.0" layoutY="267.0" mnemonicParsing="false" onAction="#eliminarStock" prefHeight="25.0" prefWidth="149.0" text="Eliminar" />
+      <Button layoutX="419.0" layoutY="169.0" mnemonicParsing="false" onAction="#anadirStock" text="Añadir" />
+      <TextField fx:id="idProducto" layoutX="226.0" layoutY="110.0" />
+      <Label layoutX="148.0" layoutY="113.0" text="Producto">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="30.0" text="Editar Productos" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="148.0" layoutY="172.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idCantidad" layoutX="226.0" layoutY="169.0" />
+      <Button layoutX="376.0" layoutY="267.0" mnemonicParsing="false" onAction="#DesactivarStock" text="Desactivar" />
+   </children>
+</AnchorPane>
