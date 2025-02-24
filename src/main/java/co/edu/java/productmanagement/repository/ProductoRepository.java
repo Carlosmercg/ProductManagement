@@ -47,5 +47,31 @@ public class ProductoRepository {
         return null;
     }
 
+    public void agregarProducto(Producto producto) throws SQLException {
+        if (buscarProductoPorNombre(producto.getNombre(), new Producto()) == null) {
+            String sql = "INSERT INTO Producto (nombre, precio, cantidad, estado, id_empresa) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+            ps.setString(1, producto.getNombre());
+            ps.setFloat(2, producto.getPrecio()); //
+            ps.setInt(3, producto.getCantidad());
+            ps.setString(4, producto.getEstado());
+            ps.setInt(5, producto.getIdEmpresa());
+            ps.executeUpdate();
+        }
+    }
+
+    public void actualizarProducto(Producto producto) throws SQLException {
+        String sql = "UPDATE Producto SET nombre = ?, precio = ?, cantidad = ?, estado = ?, id_empresa = ? WHERE id = ?";
+        PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+        ps.setString(1, producto.getNombre());
+        ps.setFloat(2, producto.getPrecio());
+        ps.setInt(3, producto.getCantidad());
+        ps.setString(4, producto.getEstado());
+        ps.setInt(5, producto.getIdEmpresa());
+        ps.setInt(6, producto.getIdProducto());
+        ps.executeUpdate();
+    }
+
+
 
 }

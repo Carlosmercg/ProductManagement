@@ -60,10 +60,10 @@ INSERT INTO Dueno (nombre, apellido, username,password,cedula) VALUES
 
 
 INSERT INTO Empresa (nombre, sector, id_dueno) VALUES
-                                                   ('Tech Solutions', 'Tecnología', 1),
-                                                   ('Market Experts', 'Consultoría', 2);
+                                                   ('Tech Solutions', 'Tecnologia', 1),
+                                                   ('Market Experts', 'Consultoria', 2);
 
 
 INSERT INTO Producto (nombre, precio, cantidad, estado,id_empresa) VALUES
-                                                                                 ('Laptop', 1500.00, 10, 'Disponible',1),
-                                                                                 ('Mouse', 25.00, 50, 'Disponible',2);
+                                                                                 ('Laptop', 1500.00, 10, 'Activo',1),
+                                                                                 ('Mouse', 25.00, 50, 'Activo',2);

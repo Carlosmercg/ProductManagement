@@ -22,7 +22,7 @@ public class EmpresaRepository {
             empresa.setIdEmpresa(resultSet.getInt("id"));
             empresa.setNombre(resultSet.getString("nombre"));
             empresa.setSector(resultSet.getString("sector"));
-            empresa.setIdDueno(resultSet.getInt("id_dueño"));
+            empresa.setIdDueno(resultSet.getInt("id_dueno"));
             return empresa;
         }
         return null;
@@ -38,10 +38,21 @@ public class EmpresaRepository {
             empresa.setIdEmpresa(resultSet.getInt("id"));
             empresa.setNombre(resultSet.getString("nombre"));
             empresa.setSector(resultSet.getString("sector"));
-            empresa.setIdDueno(resultSet.getInt("id_dueño"));
+            empresa.setIdDueno(resultSet.getInt("id_dueno"));
             return empresa;
         }
         return null;
+    }
+
+    public void agregarEmpresa(Empresa empresa) throws SQLException {
+        if (buscarEmpresaPorNombre(empresa.getNombre(), new Empresa()) == null) {
+            String sql = "INSERT INTO Empresa (nombre, sector, id_dueno) VALUES (?, ?, ?)";
+            PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
+            ps.setString(1, empresa.getNombre());
+            ps.setString(2, empresa.getSector());
+            ps.setInt(3, empresa.getIdDueno());
+            ps.executeUpdate();
+        }
     }
 
 }

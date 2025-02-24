@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.RegistroEmpresaController">
    <children>
       <TextField fx:id="ReNombre" layoutX="225.0" layoutY="160.0" />
@@ -14,7 +13,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="225.0" layoutY="269.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Registrar" />
+      <Button layoutX="225.0" layoutY="269.0" mnemonicParsing="false" onAction="#registro" prefHeight="47.0" prefWidth="150.0" text="Registrar" />
       <Label layoutX="147.0" layoutY="164.0" text="Nombre">
          <font>
             <Font name="System Bold" size="14.0" />

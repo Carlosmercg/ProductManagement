@@ -4,7 +4,7 @@ public class Producto {
 
     private int id;
     private String nombre;
-    private int precio;
+    private float precio;
     private int cantidad;
     private String estado;
     private int idEmpresa;
@@ -42,11 +42,11 @@ public class Producto {
         this.cantidad = cantidad;
     }
 
-    public int getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 

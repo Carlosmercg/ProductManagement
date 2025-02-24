@@ -4,7 +4,7 @@ public class Ventas {
     private int id;
     private int id_producto;
     private int cantidad;
-    private int valor;
+    private float valor;
     private int id_empresa;
 
     public int getId() {
@@ -31,11 +31,11 @@ public class Ventas {
         this.cantidad = cantidad;
     }
 
-    public int getValor() {
+    public float getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(float valor) {
         this.valor = valor;
     }
 
