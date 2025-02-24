@@ -4,25 +4,31 @@ public class Sesion {
 
     private static Sesion sesion = new Sesion();
     private char estado;
-    private String cedula;//Contiene la cedula delusuario que inició sesión.
+    private String cedula;//Contiene la cedula del usuario que inició sesión.
 
     private Sesion() {
         estado = 'n';
     }
 
-    public char getEstado() {
-        return estado;
+    public static char getEstado() {
+        if (sesion == null) {
+            sesion = new Sesion();
+        }
+        return sesion.estado;
     }
 
-    public void setEstado(char estado) {
-        this.estado = estado;
+    public static void setEstado(char estado) {
+        sesion.estado = estado;
     }
 
-    public String getCedula() {
-        return cedula;
+    public static String getCedula() {
+        if (sesion == null) {
+            sesion = new Sesion();
+        }
+        return sesion.cedula;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public static void setCedula(String cedula) {
+        sesion.cedula = cedula;
     }
 }

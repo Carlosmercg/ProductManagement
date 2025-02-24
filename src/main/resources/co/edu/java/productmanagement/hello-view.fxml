@@ -11,9 +11,9 @@
           <Menu mnemonicParsing="false" text="Usuario">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#registroUsuario" text="Registro" />
-              <MenuItem mnemonicParsing="false" text="Cerrar Sesion" />
-                  <MenuItem mnemonicParsing="false" text="Inicio" />
-                  <MenuItem mnemonicParsing="false" text="Salir" />
+              <MenuItem mnemonicParsing="false" onAction="#cerrar" text="Cerrar Sesion" />
+                  <MenuItem mnemonicParsing="false" onAction="#Inicio" text="Inicio" />
+                  <MenuItem mnemonicParsing="false" onAction="#Salir" text="Salir" />
             </items>
           </Menu>
         </menus>
@@ -27,9 +27,9 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="300.0" layoutY="111.0" />
-            <TextField layoutX="300.0" layoutY="174.0" />
-            <Label layoutX="210.0" layoutY="114.0" text="Username">
+            <TextField fx:id="idcedula" layoutX="300.0" layoutY="111.0" />
+            <TextField fx:id="idpassword" layoutX="300.0" layoutY="174.0" />
+            <Label layoutX="234.0" layoutY="114.0" text="Cedula">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
