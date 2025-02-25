@@ -1,4 +1,5 @@
 # ProductManagement
+
 Descripción
 Este proyecto es un sistema de gestión de productos desarrollado en Java utilizando JavaFX para la interfaz gráfica y H2 Database para la base de datos. Permite gestionar productos, empresas, dueños y ventas, proporcionando una interfaz amigable para el usuario.
 
@@ -15,8 +16,11 @@ Este proyecto es un sistema de gestión de productos desarrollado en Java utiliz
 ✔️ Base de datos en memoria con H2.
 
 🛠️ Tecnologías Utilizadas
+
 Lenguaje: Java (JDK 17 o superior)
+
 Interfaz gráfica: JavaFX
+
 Base de datos: H2 Database
 
 Para la utilizacion de este codigo se debe descargar los drives de H2 del siguiente link: https://www.h2database.com/html/main.html
