@@ -12,7 +12,6 @@ public class MenuController {
     @FXML
     public AnchorPane contenedor;
 
-    private static final Logger LOGGER = Logger.getLogger(MenuController.class.getName());
 
     private void cargarVista(String rutaFXML) {
         try {
@@ -26,10 +25,10 @@ public class MenuController {
                 AnchorPane.setLeftAnchor(pane, 0.0);
                 AnchorPane.setRightAnchor(pane, 0.0);
             } else {
-                LOGGER.log(Level.SEVERE, "El contenedor principal es null.");
+                throw new NullPointerException("No se puede cargar la Pantalla");
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error al cargar la vista: " + rutaFXML, e);
+                throw new RuntimeException(e);
         }
     }
 
@@ -57,6 +56,12 @@ public class MenuController {
     @FXML
     private void editar(){
         cargarVista("/co/edu/java/productmanagement/EditarProductos.fxml");
+
+    }
+
+    @FXML
+    private void ventasregistradas(){
+        cargarVista("/co/edu/java/productmanagement/Ventas.fxml");
 
     }
 }

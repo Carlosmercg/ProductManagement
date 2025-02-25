@@ -11,15 +11,15 @@ import javafx.scene.control.TextField;
 
 public class AgregarProductsController {
     @FXML
-    public TextField PrPrecio;
+    private TextField PrPrecio;
     @FXML
-    public TextField PrEmpresa;
+    private TextField PrEmpresa;
     @FXML
-    public TextField PrNombre;
+    private TextField PrNombre;
     @FXML
-    public TextField PrCantidad;
+    private TextField PrCantidad;
     @FXML
-    public ComboBox <String>PrEstado;
+    private ComboBox <String>PrEstado;
 
     Producto producto;
     RegistroService registroService = new RegistroService();
@@ -29,7 +29,8 @@ public class AgregarProductsController {
         PrEstado.getItems().addAll("Activo", "Inactivo");
     }
 
-    @FXML public void registro(){
+    @FXML
+    private void registro(){
         try{
             if(producto== null){
                 producto= new Producto();

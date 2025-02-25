@@ -11,14 +11,15 @@ import javafx.scene.control.TextField;
 
 public class EditarProductosController {
     @FXML
-    public TextField idProducto;
+    private TextField idProducto;
     @FXML
-    public TextField idCantidad;
+    private TextField idCantidad;
 
     EditService editService = new EditService();
     Producto producto;
 
-    public void anadirStock(){
+    @FXML
+    private void anadirStock(){
         try {
             if (producto==null){
                 producto = new Producto();
@@ -32,8 +33,8 @@ public class EditarProductosController {
             showError("Actualizacion de stock fallida");
         }
     }
-
-    public void eliminarStock(){
+    @FXML
+    private void eliminarStock(){
         try {
             if (producto==null){
                 producto = new Producto();
@@ -47,8 +48,8 @@ public class EditarProductosController {
             showError("Eliminacion fallida");
         }
     }
-
-    public void DesactivarStock(){
+    @FXML
+    private void DesactivarStock(){
         try {
             if (producto==null){
                 producto = new Producto();

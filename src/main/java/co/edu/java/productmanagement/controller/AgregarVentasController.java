@@ -11,19 +11,19 @@ import javafx.scene.control.TextField;
 
 public class AgregarVentasController {
     @FXML
-    public TextField idNombrePr;
+    private TextField idNombrePr;
 
     @FXML
-    public TextField idCantidad;
+    private TextField idCantidad;
 
     @FXML
-    public TextField idNombreEmpre;
+    private TextField idNombreEmpre;
 
     Ventas venta ;
     RegistroService registroService = new RegistroService();
 
     @FXML
-    public void registro(){
+    private void registro(){
         try{
             if(venta== null){
                 venta= new Ventas();

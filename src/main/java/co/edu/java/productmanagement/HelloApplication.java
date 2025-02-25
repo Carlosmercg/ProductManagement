@@ -23,8 +23,8 @@ public class HelloApplication extends Application {
         H2Connection conexion = new H2Connection();
         conexion.GetConnectionDBH2();
         JDBCInitializer init = new JDBCInitializer(conexion);
-        //init.inicializar();
-
+        //init.resetear();
+        init.inicializar();
         launch();
     }
 }

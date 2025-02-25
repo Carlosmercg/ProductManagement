@@ -6,15 +6,16 @@
 
 <AnchorPane fx:id="contenedor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.MenuController">
    <children>
-      <Button layoutX="242.0" layoutY="126.0" mnemonicParsing="false" onAction="#agregarproductos" text="Agregar Productos" />
-      <Button layoutX="248.0" layoutY="166.0" mnemonicParsing="false" onAction="#editar" text="Editar Productos" />
-      <Button layoutX="244.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrarempresa" text="Registrar Empresa" />
-      <Button layoutX="249.0" layoutY="252.0" mnemonicParsing="false" onAction="#Ventas" text="Registrar Ventas" />
-      <Button layoutX="272.0" layoutY="292.0" mnemonicParsing="false" onAction="#analisis" prefHeight="25.0" prefWidth="54.0" text="Stock" />
+      <Button layoutX="152.0" layoutY="132.0" mnemonicParsing="false" onAction="#agregarproductos" prefHeight="25.0" prefWidth="117.0" text="Agregar Productos" />
+      <Button layoutX="322.0" layoutY="132.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="117.0" text="Editar Productos" />
+      <Button layoutX="150.0" layoutY="187.0" mnemonicParsing="false" onAction="#registrarempresa" prefHeight="25.0" prefWidth="117.0" text="Registrar Empresa" />
+      <Button layoutX="152.0" layoutY="241.0" mnemonicParsing="false" onAction="#Ventas" prefHeight="25.0" prefWidth="117.0" text="Registrar Ventas" />
+      <Button layoutX="322.0" layoutY="241.0" mnemonicParsing="false" onAction="#analisis" prefHeight="25.0" prefWidth="117.0" text="Stock" />
       <Label layoutX="269.0" layoutY="55.0" text="Menu" textFill="#f50303">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <Button layoutX="323.0" layoutY="187.0" mnemonicParsing="false" onAction="#ventasregistradas" text="Ventas Registradas" />
    </children>
 </AnchorPane>

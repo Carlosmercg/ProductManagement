@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.java.productmanagement.controller.VentasController">
+    <Label layoutX="230.0" layoutY="14.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Registro de Ventas" />
+
+    <Button layoutX="259.0" layoutY="345.0" maxWidth="150" onAction="#actualizarInformacion" text="Actualizar Datos" />
+
+    <TableView fx:id="tablaVentas" layoutX="16.0" layoutY="70.0" prefHeight="260.0" prefWidth="567.0">
+        <columns>
+            <TableColumn fx:id="colVentaId" prefWidth="90.0" text="ID Venta" />
+            <TableColumn fx:id="colProducto" prefWidth="119.33334350585938" text="Producto" />
+            <TableColumn fx:id="colCantidad" prefWidth="161.0" text="Cantidad Vendida" />
+            <TableColumn fx:id="colEmpresa" prefWidth="120.6666259765625" text="idEmpresa" />
+         <TableColumn fx:id="colvalor" prefWidth="73.33334350585938" text="Valor" />
+        </columns>
+    </TableView>
+</AnchorPane>

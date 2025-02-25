@@ -19,7 +19,7 @@ public class H2Connection {
         try {
             Class.forName(Drive);
             connection = DriverManager.getConnection(Url,username,password);
-            System.out.println("Conexion exitosa");
+
         }catch (ClassNotFoundException|SQLException e) {
             e.printStackTrace();
             System.out.println("Error en la conexion de la base de datos");

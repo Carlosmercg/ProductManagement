@@ -15,19 +15,19 @@ public class RegistroDuenoController {
     RegistroService registroService = new RegistroService();
     Dueno dueno;
     @FXML
-    public TextField idnombre;
+    private TextField idnombre;
 
     @FXML
-    public TextField idapellido;
+    private TextField idapellido;
 
     @FXML
-    public TextField idusername;
+    private TextField idusername;
 
     @FXML
-    public TextField idcedula;
+    private TextField idcedula;
 
     @FXML
-    public TextField idpassword;
+    private TextField idpassword;
 
     @FXML
     private void registro() throws SQLException, RegistroException {

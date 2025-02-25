@@ -6,6 +6,8 @@ import co.edu.java.productmanagement.entities.Ventas;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VentasRepository {
 
@@ -38,18 +40,27 @@ public class VentasRepository {
         ps.executeUpdate();
     }
 
-        public int contarVentasPorProducto(int idProducto) throws SQLException {
-        String sql = "SELECT COUNT(*) AS total FROM Ventas WHERE id_producto = ?";
+    public List<Ventas> obtenerTodasLasVentas() throws SQLException {
+        List<Ventas> ventas = new ArrayList<>();
+        String sql = "SELECT id, id_producto, cantidad, id_empresa,valor FROM Ventas";
+
+
         PreparedStatement ps = dbConnection.GetConnectionDBH2().prepareStatement(sql);
-        ps.setInt(1, idProducto);
-        ResultSet rs = ps.executeQuery();
+             ResultSet rs = ps.executeQuery();
 
-        if (rs.next()) {
-            return rs.getInt("total");
-        }
-        return 0;
+            while (rs.next()) {
+                Ventas venta = new Ventas();
+                venta.setId(rs.getInt("id"));
+                venta.setId_producto(rs.getInt("id_producto"));
+                venta.setCantidad(rs.getInt("cantidad"));
+                venta.setId_empresa(rs.getInt("id_empresa"));
+                venta.setValor(rs.getFloat("valor"));
+
+                ventas.add(venta);
+            }
+
+        return ventas;
     }
-
 
 
 }

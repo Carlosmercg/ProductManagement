@@ -12,9 +12,9 @@ import javafx.scene.control.TextField;
 
 public class RegistroEmpresaController {
     @FXML
-    public TextField ReNombre;
+    private TextField ReNombre;
     @FXML
-    public ComboBox <String>ReSector;
+    private ComboBox <String>ReSector;
 
     Empresa empresa;
     EmpresaRepository empresaRepository = new EmpresaRepository();
@@ -26,7 +26,7 @@ public class RegistroEmpresaController {
     }
 
     @FXML
-    public void registro(){
+    private void registro(){
         try {
             if (empresa==null){
                 empresa = new Empresa();
