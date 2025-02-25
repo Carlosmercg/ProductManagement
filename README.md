@@ -3,10 +3,15 @@ Descripción
 Este proyecto es un sistema de gestión de productos desarrollado en Java utilizando JavaFX para la interfaz gráfica y H2 Database para la base de datos. Permite gestionar productos, empresas, dueños y ventas, proporcionando una interfaz amigable para el usuario.
 
 🚀 Características
+
 ✔️ CRUD de productos (Crear, Leer, Actualizar, Eliminar).
+
 ✔️ Gestión de ventas.
+
 ✔️ Soporte para múltiples empresas y dueños.
+
 ✔️ Interfaz gráfica con JavaFX.
+
 ✔️ Base de datos en memoria con H2.
 
 🛠️ Tecnologías Utilizadas
