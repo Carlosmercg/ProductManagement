@@ -59,7 +59,7 @@ public class JDBCInitializer {
     public void resetear(){
 
         try (Connection conn = dbconnection.GetConnectionDBH2();
-             InputStreamReader reader = new InputStreamReader(getClass().getResourceAsStream("/ProductM.sql"))) {
+             InputStreamReader reader = new InputStreamReader(getClass().getResourceAsStream("/clean.sql"))) {
 
             if (reader== null) {
                 throw new RuntimeException("No se pudo encontrar el archivo SQL en resources.");
@@ -67,7 +67,7 @@ public class JDBCInitializer {
 
             RunScript.execute(conn, reader);
 
-            System.out.println("Base de datos inicializada correctamente ✅");
+            System.out.println("Base de datos eliminada correctamente ✅");
 
         }catch (SQLException | IOException e) {
             e.printStackTrace();
